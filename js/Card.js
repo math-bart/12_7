@@ -23,9 +23,10 @@ function Card(id, name) {
 				method: 'PUT',
 				data: {
 					name: cardName,
+					bootcamp_kanban_column_id: self.id
 				},
 				success: function(response) {	
-					self.element.children('p').html(columnName);
+					self.element.children('p').html(cardName);
 				}
 			});
 		});
